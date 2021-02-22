@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Calculator</title>
+    <style>
+        body {
+            width: 33%;
+        }
+
+        #res {
+            background-color: light-gray;
+            border: solid;
+            height: 48px;
+            font-size: 20px;
+        }
+
+        button {
+            width: 25%;
+            height: 36px;
+            font-size: 18px;
+            margin: 0px;
+            float: left;
+        }
+
+        #btn0, #btn1 {
+            background-color: lightgreen;
+            color: brown;
+        }
+
+        #btnClr, #btnEql {
+            background-color: darkgreen;
+            color: white;
+        }
+
+        #btnSum, #btnSub, #btnMul, #btnDiv {
+            background-color: black;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- Implement a simple calculator that performs the following operations on binary numbers: addition, subtraction, multiplication, and division. Note that division operation must be integer division only; for example, 1001 / 100 = 10, 1110 / 101 = 10, and 101 / 1 = 101. -->
+
+    <input id="res"></input>
+    <div id="btns">
+        <button id="btn0">0</button>
+        <button id="btn1">1</button>
+        <button id="btnClr">C</button>
+        <button id="btnEql">=</button>
+        <button id="btnSum">+</button>
+        <button id="btnSub">-</button>
+        <button id="btnMul">*</button>
+        <button id="btnDiv">/</button>
+    </div>
+    <script>
+        const ids = [1, 2, 3, 6, 9, 8, 7, 4]; // start position ids in clockwise order
+        let nums = [1, 2, 3, 6, 9, 8, 7, 4]; // rotate in clockwise order
+        let btn5 = document.getElementById("btn5");
+
+        btn5.onclick = function() {
+            nums.unshift(nums.pop());
+            for (i = 0; i <= 7; i++) {
+                document.getElementById("btn" + ids[i]).innerHTML = nums[i];
+            }
+        };
+    </script>
+</body>
+</html>
