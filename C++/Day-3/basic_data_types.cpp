@@ -56,65 +56,26 @@
 
 // 1
 
-#include <iostream>
-#include <cstdio>
-#include <iomanip>
-using namespace std;
-
-int main() {
-    // Complete the code.
-    int a;
-    long b;
-    char c;
-    float f;
-    double db;
-    
-    cin >> a;
-    cin >> b;
-    cin >> c;
-    cin >> f;
-    cin >> db;
-    
-    cout << a << endl;
-    cout << b << endl;
-    cout << c << endl;
-    cout << setprecision(6) << f << endl;
-    cout << setprecision(14) << db << endl;
-    
-    
-    
-    return 0;
-}
 
 
-// 2
 
 #include <iostream>
 #include <cstdio>
 #include <iomanip>
 using namespace std;
-
-int main() {
-    // Complete the code.
-    int a;
-    long b;
-    char c;
-    float f;
-    double db;
+int main()
+{
+    int a; 
+    long b; 
+    char c; 
+    float d; 
+    double e;
     
-    cin >> a;
-    cin >> b;
-    cin >> c;
-    cin >> f;
-    cin >> db;
+    cin>>a>>b>>c>>d>>e;
     
-    cout << a << endl;
-    cout << b << endl;
-    cout << c << endl;
-    cout << f << endl;
-    cout << db << endl;
-    
-    
+    cout<<a<<"\n"<<b<<"\n"<<c<<"\n";
+    cout<<fixed<<setprecision(3)<<d<<"\n";
+    cout<<fixed<<setprecision(9)<<e<<"\n";
     
     return 0;
 }
